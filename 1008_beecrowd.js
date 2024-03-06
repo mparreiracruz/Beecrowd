@@ -13,7 +13,7 @@ Saída
 Imprima o número e o salário do funcionário, conforme exemplo fornecido, com um espaço em branco antes e depois da igualdade. No caso do salário, também deve haver um espaço em branco após o $.
 */
 
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
 var lines = input.split('\n');//configuracao
 
 var numeroFuncionario = parseInt(lines.shift());//Entrada

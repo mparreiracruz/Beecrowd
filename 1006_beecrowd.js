@@ -13,7 +13,7 @@ Saída
 Imprima a mensagem "MEDIA" e a média do aluno conforme exemplo abaixo, com 1 dígito após o ponto decimal e com um espaço em branco antes e depois da igualdade. Assim como todos os problemas, não esqueça de imprimir o fim de linha após o resultado, caso contrário, você receberá "Presentation Error".
  */
 
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
 var lines = input.split('\n');//configuracao
 
 var A = parseFloat(lines.shift());//Entrada

@@ -13,7 +13,7 @@ Saída
 Imprima o total que o funcionário deverá receber, conforme exemplo fornecido.
 */
 
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
 var lines = input.split('\n');//configuracao
 
 var nome = lines.shift();//Entrada

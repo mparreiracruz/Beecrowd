@@ -13,7 +13,7 @@ Saída
 Imprima a mensagem DIFERENCA com todas as letras maiúsculas, conforme exemplo abaixo, com um espaço em branco antes e depois da igualdade. 
 */
 
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
 var lines = input.split('\n');//configuracao
 
 var A = parseInt(lines.shift());//Entrada

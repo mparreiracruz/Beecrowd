@@ -13,7 +13,7 @@ Saída
 Imprima a mensagem "PROD" e a variável PROD conforme exemplo abaixo, com um espaço em branco antes e depois da igualdade. Não esqueça de imprimir o fim de linha após o produto, caso contrário seu programa apresentará a mensagem: “Presentation Error”.
  */
 
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
 var lines = input.split('\n');//configuracao
 
 var A = parseInt(lines.shift());//Entrada

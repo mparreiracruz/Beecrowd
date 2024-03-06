@@ -12,7 +12,7 @@ O arquivo de entrada contém duas linhas de dados. Em cada linha haverá 3 valor
 Saída
 A saída deverá ser uma mensagem conforme o exemplo fornecido abaixo, lembrando de deixar um espaço após os dois pontos e um espaço após o "R$". O valor deverá ser apresentado com 2 casas após o ponto. 
 */
-var input = require('fs').readFileSync('/dev/stdin', 'utf8');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
 var linesPrincipal = input.split('\n');//configuracao
 
 var lines1 = linesPrincipal.shift().split(" ")//cofiguracao para exibir o resultado em 1 linha com espaco entre os valores 
