@@ -47,7 +47,6 @@ var input = require('fs').readFileSync('stdin', 'utf8')//configuracao
 var linhaPrincipal = input.split('\n');//configuracao
 var lines1 = linhaPrincipal.shift().split(" ")//configuracao
 
-
 var A = parseFloat(lines1.shift());//Entrada
 var B = parseFloat(lines1.shift());//Entrada
 var C = parseFloat(lines1.shift());//Entrada

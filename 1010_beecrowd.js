@@ -11,19 +11,26 @@ O arquivo de entrada contém duas linhas de dados. Em cada linha haverá 3 valor
 
 Saída
 A saída deverá ser uma mensagem conforme o exemplo fornecido abaixo, lembrando de deixar um espaço após os dois pontos e um espaço após o "R$". O valor deverá ser apresentado com 2 casas após o ponto. 
+
+Exemplo de entrada:                   Exemplo de saída:
+12 1 5.30                             VALOR A PAGAR: R$ 15.50
+16 2 5.10
+
+13 2 15.30                            VALOR A PAGAR: R$ 51.40 
+161 4 5.20
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
-var linesPrincipal = input.split('\n');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada 
 
-var lines1 = linesPrincipal.shift().split(" ")//cofiguracao para exibir o resultado em 1 linha com espaco entre os valores 
-var lines2 = linesPrincipal.shift().split(" ")//configuracao para exibir o resultado em 1 linha com espaco entre os valores
+var linhaPrincipal = input.split('\n');//configuracao de saída
+var linha1 = linhaPrincipal.shift().split(" "); //configuracao de saída
+var linha2 = linhaPrincipal.shift().split(" ");//configuracao de saída
 
-var codigoPeca1 = parseInt(lines1.shift());//Entrada
-var numeroDePeca1 = parseInt(lines1.shift());//Entrada
-var valorUnitarioDeCadaPeca1 = parseFloat(lines1.shift());//Entrada
-var codigoPeca2 = parseInt(lines2.shift());//Entrada
-var numeroDePeca2 = parseInt(lines2.shift());//Entrada
-var valorUnitarioDeCadaPeca2 = parseFloat(lines2.shift());//Entrada
+var codigoPeca1 = parseInt(linha1.shift());//Entrada
+var numeroDePeca1 = parseInt(linha1.shift());//Entrada
+var valorUnitarioDeCadaPeca1 = parseFloat(linha1.shift());//Entrada
+var codigoPeca2 = parseInt(linha2.shift());//Entrada
+var numeroDePeca2 = parseInt(linha2.shift());//Entrada
+var valorUnitarioDeCadaPeca2 = parseFloat(linha2.shift());//Entrada
 
 var ValorASerPago = (numeroDePeca1 * valorUnitarioDeCadaPeca1) + (numeroDePeca2 * valorUnitarioDeCadaPeca2);//Processamento
 
