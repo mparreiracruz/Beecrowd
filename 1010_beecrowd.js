@@ -26,11 +26,23 @@ var linha1 = linhaPrincipal.shift().split(" "); //configuracao de saída
 var linha2 = linhaPrincipal.shift().split(" ");//configuracao de saída
 
 var codigoPeca1 = parseInt(linha1.shift());//Entrada
+console.log("Digite o código da 1ª peca: " + codigoPeca1);
+
 var numeroDePeca1 = parseInt(linha1.shift());//Entrada
+console.log("Digite o número da 1ª peca: " + numeroDePeca1);
+
 var valorUnitarioDeCadaPeca1 = parseFloat(linha1.shift());//Entrada
+console.log("Digite o valor unitário de cada peca: " + valorUnitarioDeCadaPeca1);
+
 var codigoPeca2 = parseInt(linha2.shift());//Entrada
+console.log("Digite o código da 2ª peca: " + codigoPeca2);
+
 var numeroDePeca2 = parseInt(linha2.shift());//Entrada
+console.log("Digite o número da 2ª peca: " + numeroDePeca2);
+
 var valorUnitarioDeCadaPeca2 = parseFloat(linha2.shift());//Entrada
+console.log("Digite o valor unitário de cada peca: " + valorUnitarioDeCadaPeca2);
+
 
 var ValorASerPago = (numeroDePeca1 * valorUnitarioDeCadaPeca1) + (numeroDePeca2 * valorUnitarioDeCadaPeca2);//Processamento
 

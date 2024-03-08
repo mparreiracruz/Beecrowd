@@ -11,22 +11,35 @@ O arquivo de entrada contém um texto (primeiro nome do vendedor) e 2 valores de
 
 Saída
 Imprima o total que o funcionário deverá receber, conforme exemplo fornecido.
-*/
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
-var lines = input.split('\n');//configuracao
+Exemplos de Entrada             Exemplos de Saída
+JOAO                            TOTAL = R$ 684.54
+500.00
+1230.00
+
+PEDRO                           TOTAL = R$ 700.00
+700.00
+0.00
+
+
+
+MANGOJATA                       TOTAL = R$ 1884.58
+1700.00
+1230.50
+*/
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var lines = input.split('\n');//configuracao de saída
 
 var nome = lines.shift();//Entrada
+console.log("Digite seu nome: " + nome);//Entrada com pergunta ao usuário
+
 var salarioFixo = parseFloat(lines.shift());//Entrada
+console.log("Digite o valor do seu salário fixo: " + salarioFixo);//Entrada com pergunta ao usuário
+
 var totalDeVendas = parseFloat(lines.shift());//Entrada
+console.log("Digite o total de vendas efetuadas: " + totalDeVendas);//Entrada com pergunta ao usuário
 
 var comissao = totalDeVendas * 0.15;//Processamento
 var valorFinal = salarioFixo + comissao;//Processamento
 
 console.log("TOTAL = R$ " + valorFinal.toFixed(2));//Saída
-
-
-
-
-
-

@@ -11,14 +11,34 @@ O arquivo de entrada contém 2 números inteiros e 1 número com duas casas deci
 
 Saída
 Imprima o número e o salário do funcionário, conforme exemplo fornecido, com um espaço em branco antes e depois da igualdade. No caso do salário, também deve haver um espaço em branco após o $.
+
+Exemplos de Entrada	            Exemplos de Saída
+25                              NUMBER = 25
+100                             SALARY = U$ 550.00
+5.50
+
+
+1                               NUMBER = 1
+200                             SALARY = U$ 4100.00
+20.50
+
+
+6                               NUMBER = 6
+145                             SALARY = U$ 2254.75
+15.55
 */
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
-var lines = input.split('\n');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var lines = input.split('\n');//configuracao de saída
 
 var numeroFuncionario = parseInt(lines.shift());//Entrada
+console.log("Digite o número da sua identificacao: " + numeroFuncionario);//Entrada com pergunta ao usuário
+
 var horasTrabalhadas = parseInt(lines.shift());//Entrada
+console.log("Digite o seu número de horas trabalhadas: " + horasTrabalhadas);//Entrada com pergunta ao usuário
+
 var valorPorHora = parseFloat(lines.shift());//Entrada
+console.log("Digite o seu valor recebido por horas trabalhadas: " + valorPorHora);
 
 var valorPorHoraTrabalhada = horasTrabalhadas * valorPorHora;//Processamento
 

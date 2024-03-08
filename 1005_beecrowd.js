@@ -11,18 +11,33 @@ O arquivo de entrada contém 2 valores com uma casa decimal cada um.
 
 Saída
 Imprima a mensagem "MEDIA" e a média do aluno conforme exemplo abaixo, com 5 dígitos após o ponto decimal e com um espaço em branco antes e depois da igualdade. Utilize variáveis de dupla precisão (double) e como todos os problemas, não esqueça de imprimir o fim de linha após o resultado, caso contrário, você receberá "Presentation Error".
- */
+ 
+Média Ponderada: //https://matematicabasica.net/media-ponderada/
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
-var lines = input.split('\n');//configuracao
+Exemplos de Entrada	            Exemplos de Saída
+5.0                             MEDIA = 6.43182
+7.1
+
+
+0.0                             MEDIA = 4.84091
+7.1
+
+
+10.0                            MEDIA = 10.00000
+10.0
+*/
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var lines = input.split('\n');//configuracao saída
 
 var A = parseFloat(lines.shift());//Entrada
-var B = parseFloat(lines.shift());//Entrada
+console.log("Digite sua 1ª nota: " + A);//Entrada com pergunta ao usuário
+
+var B = parseFloat(lines.shift());//Entrada 
+console.log("Digite sua 2ª nota: " + B);//Entrada com pergunta ao usuário
+
 var pesoA = 3.5;//Entrada
 var pesoB = 7.5;//Entrada
 
 var media = ((A * pesoA) + (B * pesoB)) / 11;//Processamento
 
 console.log('MEDIA = ' + media.toFixed(5));//Saída
-
-//https://matematicabasica.net/media-ponderada/
