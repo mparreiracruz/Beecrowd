@@ -26,5 +26,6 @@ Exemplo de Entrada              Exemplo de Saída
 7                               14 minutos
 */
 var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+
 var lines = input.split('\n');//configuracao de saída
 
