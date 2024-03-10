@@ -29,7 +29,9 @@ var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrad
 var lines = input.split('\n');//configuracao de saída
 
 var X = parseInt(lines.shift());//Entrada
+console.log("Digite a distância total percorrida em Km: " + X);//Entrada com pergunta ao usuário
 var Y = parseFloat(lines.shift()).toFixed(1);//Entrada
+console.log("Digite o total de combustível gasto com um dígito após o ponto decimal: " + Y);//Entrada com pergunta ao usuário
 
 var consumoMedioDeCombustivel = X / Y;//Processamento 
 

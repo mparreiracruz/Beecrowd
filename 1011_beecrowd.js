@@ -13,12 +13,21 @@ O arquivo de entrada contém um valor de ponto flutuante (dupla precisão), corr
 
 Saída
 A saída deverá ser uma mensagem "VOLUME" conforme o exemplo fornecido abaixo, com um espaço antes e um espaço depois da igualdade. O valor deverá ser apresentado com 3 casas após o ponto.
-*/
 
+Exemplos de Entrada         	Exemplos de Saída
+3                               VOLUME = 113.097
+
+
+15                              VOLUME = 14137.155
+
+
+1523                            VOLUME = 14797486501.627
+*/
 var input = require('fs').readFileSync('stdin', 'utf8')//configuracao
 var lines = input.split('\n');//configuracao
 
 var R = parseFloat(lines.shift());//Entrada
+console.log("Digite o valor do raio: " + R);//Entrada com pergunta ao usuário
 var pi = 3.14159//Entrada
 
 var volume = (4/3.0) * pi * (R * R * R);//Processamento

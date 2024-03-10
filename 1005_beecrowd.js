@@ -35,8 +35,8 @@ console.log("Digite sua 1ª nota: " + A);//Entrada com pergunta ao usuário
 var B = parseFloat(lines.shift());//Entrada 
 console.log("Digite sua 2ª nota: " + B);//Entrada com pergunta ao usuário
 
-var pesoA = 3.5;//Entrada
-var pesoB = 7.5;//Entrada
+var pesoA = 3.5;//Entrada inicializada
+var pesoB = 7.5;//Entrada inicializada
 
 var media = ((A * pesoA) + (B * pesoB)) / 11;//Processamento
 

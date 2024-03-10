@@ -16,22 +16,22 @@ O arquivo de entrada contém três valores com um dígito após o ponto decimal.
 Saída
 O arquivo de saída deverá conter 5 linhas de dados. Cada linha corresponde a uma das áreas descritas acima, sempre com mensagem correspondente e um espaço entre os dois pontos e o valor. O valor calculado deve ser apresentado com 3 dígitos após o ponto decimal.
 
-Exemplos de Entrada	Exemplos de Saída
-3.0 4.0 5.2
+Exemplos de Entrada	            Exemplos de Saída
+3.0 4.0 5.2                     TRIANGULO: 7.800
+                                CIRCULO: 84.949
+                                TRAPEZIO: 18.200
+                                QUADRADO: 16.000
+                                RETANGULO: 12.000
 
-TRIANGULO: 7.800
-CIRCULO: 84.949
-TRAPEZIO: 18.200
-QUADRADO: 16.000
-RETANGULO: 12.000
 
-12.7 10.4 15.2
 
-TRIANGULO: 96.520
-CIRCULO: 725.833
-TRAPEZIO: 175.560
-QUADRADO: 108.160
-RETANGULO: 132.080
+12.7 10.4 15.2                  TRIANGULO: 96.520
+                                CIRCULO: 725.833
+                                TRAPEZIO: 175.560
+                                QUADRADO: 108.160
+                                RETANGULO: 132.080
+
+
 
 Fórmula da área do triângulo retângulo: https://mundoeducacao.uol.com.br/matematica/area-triangulo-2.htm#:~:text=A%20%C3%A1rea%20do%20tri%C3%A2ngulo%20ret%C3%A2ngulo,do%20produto%20entre%20os%20catetos.
 
@@ -48,8 +48,11 @@ var linhaPrincipal = input.split('\n');//configuracao
 var lines1 = linhaPrincipal.shift().split(" ")//configuracao
 
 var A = parseFloat(lines1.shift());//Entrada
+console.log("Digite o 1º valor: " + A);//Entrada com pergunta ao usuário
 var B = parseFloat(lines1.shift());//Entrada
+console.log("Digite o 2º valor: " + B);//Entrada com pergunta ao usuário
 var C = parseFloat(lines1.shift());//Entrada
+console.log("Digite o 3º valor: " + C);//Entrada com pergunta ao usuário
 var pi = 3.14159;
 
 var areaTriangulo = (A * C) / 2;//Processamento

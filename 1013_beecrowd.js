@@ -28,8 +28,11 @@ var linha1 = linhaPrincipal.shift().split(" ");//configuracao de saída
 
 
 var A = parseInt(linha1.shift());//Entrada
+console.log("Digite o 1º valor: " + A);//Entrada com pergunta ao usuário
 var B = parseInt(linha1.shift());//Entrada
+console.log("Digite o 2º valor: " + B);//Entrada com pergunta ao usuário
 var C = parseInt(linha1.shift());//Entrada
+console.log("Digite o 3º valor: " + C);//Entrada com pergunta ao usuário
 
 MaiorAB = (A + B + Math.abs(A - B)) / 2;//Processamento 1
 MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2;//Processamento 2

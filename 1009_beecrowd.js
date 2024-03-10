@@ -22,7 +22,6 @@ PEDRO                           TOTAL = R$ 700.00
 0.00
 
 
-
 MANGOJATA                       TOTAL = R$ 1884.58
 1700.00
 1230.50

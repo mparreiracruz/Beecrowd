@@ -26,10 +26,10 @@ var linha1 = linhaPrincipal.shift().split(" "); //configuracao de saída
 var linha2 = linhaPrincipal.shift().split(" ");//configuracao de saída
 
 var codigoPeca1 = parseInt(linha1.shift());//Entrada
-console.log("Digite o código da 1ª peca: " + codigoPeca1);
+console.log("Digite o código da 1ª peca: " + codigoPeca1);//Entrada com pergunta ao usuário
 
 var numeroDePeca1 = parseInt(linha1.shift());//Entrada
-console.log("Digite o número da 1ª peca: " + numeroDePeca1);
+console.log("Digite o número da 1ª peca: " + numeroDePeca1);//Entrada com pergunta ao usuário
 
 var valorUnitarioDeCadaPeca1 = parseFloat(linha1.shift());//Entrada
 console.log("Digite o valor unitário de cada peca: " + valorUnitarioDeCadaPeca1);

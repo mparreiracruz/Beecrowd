@@ -20,8 +20,8 @@ Exemplos de Entrada                 Exemplos de Saída
 0
 */
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao
-var lines = input.split('\n');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var lines = input.split('\n');//configuracao de saída
 
 var A = parseInt(lines.shift());//Entrada
 console.log("Digite o 1º valor inteiro da adicao: " + A);//Entrada com pergunta ao usuário
