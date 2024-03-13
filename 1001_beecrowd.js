@@ -20,7 +20,7 @@ Exemplos de Entrada               Exemplos de Saída
 -7
 */
 
-var input = require('fs').readFileSync('stdin', 'utf8')//configuracao de entrada
+var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
 var lines = input.split('\n');//configuracao de saída
 
 var A = parseInt(lines.shift());//Entrada
