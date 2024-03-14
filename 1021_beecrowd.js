@@ -62,7 +62,6 @@ Exemplo de Entrada	            Exemplo de Saída
                                 0 moeda(s) de R$ 0.05
                                 1 moeda(s) de R$ 0.01
 */
-
 var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
 var linha1 = input.split('\n');//configuracao de saída
 
@@ -76,13 +75,19 @@ var moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01];
 notas.sort((a, b) => b - a);
 moedas.sort((a, b) => b - a);
 
-for(var i = 0; i < notas.length, i < moedas.length; i++){
-    var divisorDeNotas = Math.floor(n / notas[i]);
-    var divisorDeMoedas = Math.floor(n / moedas[i]);        
-          if(n >= 0 && n <= 1000000.00){
-            console.log("NOTAS:" + divisorDeNotas + " \nnota(s) de R$ " + notas[i]+ ".00");
-            console.log("MOEDAS:" + divisorDeMoedas + " moeda(s) de R$ " + moedas[i]);  
-            n %= notas[i];
-            n %= moedas[i];
-        } 
-    }
+console.log("NOTAS:");
+        for(var i = 0; i < notas.length, i < moedas.length; i++){
+        var divisorDeNotas = Math.floor(n / notas[i]);            
+            if(n >= 0 && n <= 1000000.00){            
+                console.log(divisorDeNotas + " nota(s) de R$ " + notas[i]+ ".00");  
+                n %= notas[i];
+            }
+        }     
+console.log("MOEDAS:");
+        for(var i = 0; i < moedas.length; i++){    
+        var divisorDeMoedas = Math.floor(n / moedas[i]);
+            if(n >= 0 && n <= 1000000.00){
+                console.log(divisorDeMoedas + " moeda(s) de R$ " + moedas[i].toFixed(2));  
+                n %= moedas[i];
+            }        
+        }
