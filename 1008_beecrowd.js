@@ -27,20 +27,14 @@ Exemplos de Entrada	            Exemplos de Saída
 145                             SALARY = U$ 2254.75
 15.55
 */
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
-var lines = input.split('\n');//configuracao de saída
-
-var numeroFuncionario = parseInt(lines.shift());//Entrada
-console.log("Digite o número da sua identificacao: " + numeroFuncionario);//Entrada com pergunta ao usuário
-
-var horasTrabalhadas = parseInt(lines.shift());//Entrada
-console.log("Digite o seu número de horas trabalhadas: " + horasTrabalhadas);//Entrada com pergunta ao usuário
-
-var valorPorHora = parseFloat(lines.shift());//Entrada
-console.log("Digite o seu valor recebido por horas trabalhadas: " + valorPorHora);
+var numeroFuncionario = parseInt(lines.shift());//Entrada 01
+var horasTrabalhadas = parseInt(lines.shift());//Entrada 02
+var valorPorHora = parseFloat(lines.shift());//Entrada 03
 
 var valorPorHoraTrabalhada = horasTrabalhadas * valorPorHora;//Processamento
 
-console.log("NUMBER = " + numeroFuncionario);//Saída 
-console.log("SALARY = U$ " + valorPorHoraTrabalhada.toFixed(2));//Saída
+console.log("NUMBER = " + numeroFuncionario);//Saída 01
+console.log("SALARY = U$ " + valorPorHoraTrabalhada.toFixed(2));//Saída 02

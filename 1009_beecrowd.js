@@ -17,6 +17,7 @@ JOAO                            TOTAL = R$ 684.54
 500.00
 1230.00
 
+
 PEDRO                           TOTAL = R$ 700.00
 700.00
 0.00
@@ -29,16 +30,11 @@ MANGOJATA                       TOTAL = R$ 1884.58
 var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
 var lines = input.split('\n');//configuracao de saída
 
-var nome = lines.shift();//Entrada
-console.log("Digite seu nome: " + nome);//Entrada com pergunta ao usuário
+var nome = lines.shift();//Entrada 01
+var salarioFixo = parseFloat(lines.shift());//Entrada 02
+var totalDeVendas = parseFloat(lines.shift());//Entrada 03
 
-var salarioFixo = parseFloat(lines.shift());//Entrada
-console.log("Digite o valor do seu salário fixo: " + salarioFixo);//Entrada com pergunta ao usuário
-
-var totalDeVendas = parseFloat(lines.shift());//Entrada
-console.log("Digite o total de vendas efetuadas: " + totalDeVendas);//Entrada com pergunta ao usuário
-
-var comissao = totalDeVendas * 0.15;//Processamento
-var valorFinal = salarioFixo + comissao;//Processamento
-
+var comissao = totalDeVendas * 0.15;//Processamento 01
+var valorFinal = salarioFixo + comissao;//Processamento 02
+ 
 console.log("TOTAL = R$ " + valorFinal.toFixed(2));//Saída

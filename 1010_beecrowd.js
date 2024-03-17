@@ -16,33 +16,25 @@ Exemplo de entrada:                   Exemplo de saída:
 12 1 5.30                             VALOR A PAGAR: R$ 15.50
 16 2 5.10
 
+
 13 2 15.30                            VALOR A PAGAR: R$ 51.40 
 161 4 5.20
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada 
+var input = require("fs").readFileSync("stdin","utf8");
+var lines = input.split("\n");
 
-var linhaPrincipal = input.split('\n');//configuracao de saída
-var linha1 = linhaPrincipal.shift().split(" "); //configuracao de saída
-var linha2 = linhaPrincipal.shift().split(" ");//configuracao de saída
+var line1 = lines.shift();
+var line2 = lines.shift();
 
-var codigoPeca1 = parseInt(linha1.shift());//Entrada
-console.log("Digite o código da 1ª peca: " + codigoPeca1);//Entrada com pergunta ao usuário
+var Produto01 = line1.split(" ");
+var codiogoProduto1 = parseInt(Produto01.shift());
+var numeroDePeca1 = parseInt(Produto01.shift());
+var valorUnitarioDeCadaPeca1     = parseFloat(Produto01.shift());
 
-var numeroDePeca1 = parseInt(linha1.shift());//Entrada
-console.log("Digite o número da 1ª peca: " + numeroDePeca1);//Entrada com pergunta ao usuário
-
-var valorUnitarioDeCadaPeca1 = parseFloat(linha1.shift());//Entrada
-console.log("Digite o valor unitário de cada peca: " + valorUnitarioDeCadaPeca1);
-
-var codigoPeca2 = parseInt(linha2.shift());//Entrada
-console.log("Digite o código da 2ª peca: " + codigoPeca2);
-
-var numeroDePeca2 = parseInt(linha2.shift());//Entrada
-console.log("Digite o número da 2ª peca: " + numeroDePeca2);
-
-var valorUnitarioDeCadaPeca2 = parseFloat(linha2.shift());//Entrada
-console.log("Digite o valor unitário de cada peca: " + valorUnitarioDeCadaPeca2);
-
+var Produto02 = line2.split(" ");
+var condigoProduto2 = parseInt(Produto02.shift());
+var numeroDePeca2 = parseInt(Produto02.shift());
+var valorUnitarioDeCadaPeca2 = parseFloat(Produto02.shift());
 
 var ValorASerPago = (numeroDePeca1 * valorUnitarioDeCadaPeca1) + (numeroDePeca2 * valorUnitarioDeCadaPeca2);//Processamento
 

@@ -24,14 +24,11 @@ Exemplo de Entrada          Exemplo de Saída
 4554                        9.802 km/l
 464.6 
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var lines = input.split('\n');//configuracao de saída
-
-var X = parseInt(lines.shift());//Entrada
-console.log("Digite a distância total percorrida em Km: " + X);//Entrada com pergunta ao usuário
-var Y = parseFloat(lines.shift()).toFixed(1);//Entrada
-console.log("Digite o total de combustível gasto com um dígito após o ponto decimal: " + Y);//Entrada com pergunta ao usuário
+var X = parseInt(lines.shift());//Entrada 01
+var Y = parseFloat(lines.shift()).toFixed(1);//Entrada 02
 
 var consumoMedioDeCombustivel = X / Y;//Processamento 
 

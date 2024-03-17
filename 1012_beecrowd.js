@@ -43,26 +43,25 @@ Fórmula da área do quadrado: https://brasilescola.uol.com.br/matematica/area-d
 
 Fórmula da área do retângulo: https://mundoeducacao.uol.com.br/matematica/area-retangulo.htm
 */
-var input = require('fs').readFileSync('stdin', 'utf8')//configuracao
-var linhaPrincipal = input.split('\n');//configuracao
-var lines1 = linhaPrincipal.shift().split(" ")//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');//configuracao
+var line1 = lines.shift();
+var entrada01 = line1.split(" ");
 
-var A = parseFloat(lines1.shift());//Entrada
-console.log("Digite o 1º valor: " + A);//Entrada com pergunta ao usuário
-var B = parseFloat(lines1.shift());//Entrada
-console.log("Digite o 2º valor: " + B);//Entrada com pergunta ao usuário
-var C = parseFloat(lines1.shift());//Entrada
-console.log("Digite o 3º valor: " + C);//Entrada com pergunta ao usuário
-var pi = 3.14159;
+var A = parseFloat(entrada01.shift());//Entrada 01
+var B = parseFloat(entrada01.shift());//Entrada 02
+var C = parseFloat(entrada01.shift());//Entrada 03
 
-var areaTriangulo = (A * C) / 2;//Processamento
-var areaCirculo = (C * C) * pi;//Processamento
-var areaTrapezio = ((A + B) * C) / 2;//Processamento
-var areaQuadrado = B * B;//Processamento
-var areaRetangulo = A * B;//Processamento
+const pi = 3.14159;//Entrada constante
 
-console.log("TRIANGULO: " + areaTriangulo.toFixed(3));//Saída
-console.log("CIRCULO: " + areaCirculo.toFixed(3));//Saída
-console.log("TRAPEZIO: " + areaTrapezio.toFixed(3));//Saída
-console.log("QUADRADO: " + areaQuadrado.toFixed(3));//Saída
-console.log("RETANGULO: " + areaRetangulo.toFixed(3));//Saída
+var areaTriangulo = (A * C) / 2;//Processamento 01
+var areaCirculo = (C * C) * pi;//Processamento 02
+var areaTrapezio = ((A + B) * C) / 2;//Processamento 03
+var areaQuadrado = B * B;//Processamento 04
+var areaRetangulo = A * B;//Processamento 05
+
+console.log("TRIANGULO: " + areaTriangulo.toFixed(3));//Saída 01
+console.log("CIRCULO: " + areaCirculo.toFixed(3));//Saída 02 
+console.log("TRAPEZIO: " + areaTrapezio.toFixed(3));//Saída 03
+console.log("QUADRADO: " + areaQuadrado.toFixed(3));//Saída 04
+console.log("RETANGULO: " + areaRetangulo.toFixed(3));//Saída 05

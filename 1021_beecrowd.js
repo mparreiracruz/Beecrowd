@@ -65,9 +65,7 @@ Exemplo de Entrada	            Exemplo de Saída
 var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
 var linha1 = input.split('\n');//configuracao de saída
 
-var n = parseFloat(linha1.shift());
-console.log("Digite um valor monetário com duas casas decimais: " + n);
-console.log(n.toFixed(2));
+var n = parseFloat(linha1.shift()).toFixed(2);
 
 var notas = [100, 50, 20, 10, 5, 2];
 var moedas = [1, 0.50, 0.25, 0.10, 0.05, 0.01];
@@ -76,18 +74,15 @@ notas.sort((a, b) => b - a);
 moedas.sort((a, b) => b - a);
 
 console.log("NOTAS:");
-        for(var i = 0; i < notas.length, i < moedas.length; i++){
-        var divisorDeNotas = Math.floor(n / notas[i]);            
-            if(n >= 0 && n <= 1000000.00){            
-                console.log(divisorDeNotas + " nota(s) de R$ " + notas[i]+ ".00");  
-                n %= notas[i];
-            }
-        }     
+for(var i = 0; i < notas.length; i++){
+    var divisorDeNotas = Math.floor(n / notas[i]);            
+    console.log(divisorDeNotas + " nota(s) de R$ " + notas[i].toFixed(2));  
+    n %= notas[i];
+}     
+
 console.log("MOEDAS:");
-        for(var i = 0; i < moedas.length; i++){    
-        var divisorDeMoedas = Math.floor(n / moedas[i]);
-            if(n >= 0 && n <= 1000000.00){
-                console.log(divisorDeMoedas + " moeda(s) de R$ " + moedas[i].toFixed(2));  
-                n %= moedas[i];
-            }        
-        }
+for(var i = 0; i < moedas.length; i++){    
+    var divisorDeMoedas = Math.floor(n / moedas[i]);
+    console.log(divisorDeMoedas + " moeda(s) de R$ " + moedas[i].toFixed(2));  
+    n %= moedas[i];   
+}

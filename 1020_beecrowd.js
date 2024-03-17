@@ -29,15 +29,14 @@ Exemplo de Entrada	            Exemplo de Saída
                                 1 mes(es)
                                 0 dia(s)
 */
+var input = require('fs').readFileSync('stdin', 'utf8');
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var lines = input.split('\n');
 
-var lines = input.split('\n');//configuracao de saída
+var A = parseInt(lines.shift());//Entrada 
 
-var A = parseInt(lines.shift());//Entrada
+var idadeEmAnos = Math.floor(A / 365);//Processamento 01
+var idadeEmMeses = Math.floor((A % 365) / 30);//Processamento 02    
+var idadeEmDiasFormula = Math.floor((A % 365) % 30);//Processamento 03
 
-var idadeEmAnos = Math.floor(A / 365);
-var idadeEmMeses = Math.floor((A % 365) / 30);
-var idadeEmDiasFormula = Math.floor((A % 365) % 30);
-
-console.log(idadeEmAnos + " ano(s)\n" + idadeEmMeses + " mes(es)\n" + idadeEmDiasFormula + " dia(s)");
+console.log(idadeEmAnos + " ano(s)\n" + idadeEmMeses + " mes(es)\n" + idadeEmDiasFormula + " dia(s)");//Saída

@@ -30,20 +30,13 @@ Exemplos de Entrada	            Exemplos de Saída
 -7
 8
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
-var lines = input.split('\n');//configuracao de saída 
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var A = parseInt(lines.shift());//Entrada
-console.log("Digite o 1º valor do tipo inteiro: " + A);//Entrada com pergunta ao usuário
-
-var B = parseInt(lines.shift());//Entrada
-console.log("Digite o 2º valor do tipo inteiro: " + B);//Entrada com pergunta ao usuário
-
-var C = parseInt(lines.shift());//Entrada
-console.log("Digite o 3º valor do tipo inteiro: " + C);//Entrada com pergunta ao usuário
-
-var D = parseInt(lines.shift());//Entrada
-console.log("Digite o 4º valor do tipo inteiro: " + D);//Entrada com pergunta ao usuário
+var A = parseInt(lines.shift());//Entrada 01
+var B = parseInt(lines.shift());//Entrada 02
+var C = parseInt(lines.shift());//Entrada 03
+var D = parseInt(lines.shift());//Entrada 04
 
 var DIFERENCA = (A * B - C * D);//Processamento
 

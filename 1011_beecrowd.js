@@ -23,12 +23,11 @@ Exemplos de Entrada         	Exemplos de Saída
 
 1523                            VOLUME = 14797486501.627
 */
-var input = require('fs').readFileSync('stdin', 'utf8')//configuracao
-var lines = input.split('\n');//configuracao
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var R = parseFloat(lines.shift());//Entrada
-console.log("Digite o valor do raio: " + R);//Entrada com pergunta ao usuário
-var pi = 3.14159//Entrada
+var R = parseFloat(lines.shift());//Entrada 01
+const pi = 3.14159//Entrada constante 01
 
 var volume = (4/3.0) * pi * (R * R * R);//Processamento
 

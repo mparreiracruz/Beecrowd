@@ -25,12 +25,10 @@ Exemplo de Entrada              Exemplo de Saída
 
 7                               14 minutos
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
-
-var linha1 = input.split('\n');//configuracao de saída
+var input = require('fs').readFileSync('stdin', 'utf8');
+var linha1 = input.split('\n');
 
 var km = parseInt(linha1.shift());//Entrada
-console.log("Digite em quilômetros a velocidade do carro Y: " + km);//Entrada com pergunta ao usuário
 
 distancia = km * 2;//Processamento
 

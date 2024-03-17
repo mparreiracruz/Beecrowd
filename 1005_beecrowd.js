@@ -26,17 +26,14 @@ Exemplos de Entrada	            Exemplos de Saída
 10.0                            MEDIA = 10.00000
 10.0
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
-var lines = input.split('\n');//configuracao saída
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var A = parseFloat(lines.shift());//Entrada
-console.log("Digite sua 1ª nota: " + A);//Entrada com pergunta ao usuário
+var A = parseFloat(lines.shift());//Entrada 01
+var B = parseFloat(lines.shift());//Entrada 02
 
-var B = parseFloat(lines.shift());//Entrada 
-console.log("Digite sua 2ª nota: " + B);//Entrada com pergunta ao usuário
-
-var pesoA = 3.5;//Entrada inicializada
-var pesoB = 7.5;//Entrada inicializada
+const pesoA = 3.5;//Entrada constante 01
+const pesoB = 7.5;//Entrada constante 02
 
 var media = ((A * pesoA) + (B * pesoB)) / 11;//Processamento
 

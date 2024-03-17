@@ -1,4 +1,4 @@
-/**
+/*
 Produto Simples
 Adaptado por Neilor Tonin, URI  Brasil
 
@@ -24,14 +24,11 @@ Exemplos de Entrada	            Exemplos de Saída
 0                               PROD = 0
 9
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
-var lines = input.split('\n');//configuracao de saída
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var A = parseInt(lines.shift());//Entrada
-console.log("Digite o 1º valor da multipicao: " + A);//Entrada com pergunta ao usuário
-
-var B = parseInt(lines.shift());//Entrada
-console.log("Digite o 2º valor da multipicao: " + A);//Entrada com pergunta ao usuário
+var A = parseInt(lines.shift());//Entrada 01
+var B = parseInt(lines.shift());//Entrada 02
 
 var PROD = A * B;//Processamento
 

@@ -1,5 +1,5 @@
 /**
- * beecrowd | 1035
+beecrowd | 1035
 Teste de Seleção 1
 Adaptado por Neilor Tonin, URI  Brasil
 

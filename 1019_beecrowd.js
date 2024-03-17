@@ -22,13 +22,13 @@ Exemplo de Entrada	            Exemplo de Saída
 140153                          38:55:53
 */
 
-var input = require('fs').readFileSync('stdin', 'utf8')//configuracao de entrada
-var lines = input.split('\n');//configuracao de saída
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var N = parseInt(lines.shift());
+var N = parseInt(lines.shift());//Entrada
 
-var divisorHora = Math.floor(N / 3600);
-var dividisorMinuto = Math.floor((N % 3600) / 60);
-var divisorSegundo = Math.floor((N % 3600) % 60);
+var divisorHora = Math.floor(N / 3600);//Processamento 01
+var dividisorMinuto = Math.floor((N % 3600) / 60);//Processamento 02    
+var divisorSegundo = Math.floor((N % 3600) % 60);//Processamento 03
 
-console.log(divisorHora + ":" + dividisorMinuto + ":" + divisorSegundo);
+console.log(divisorHora + ":" + dividisorMinuto + ":" + divisorSegundo);//Saída

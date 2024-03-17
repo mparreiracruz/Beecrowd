@@ -18,23 +18,21 @@ Imprima o maior dos três valores seguido por um espaço e a mensagem "eh o maio
 
 Exemplos de Entrada             Exemplos de Saída
 7 14 106                        106 eh o maior
+
+
 217 14 6                        217 eh o maior
 */
+var input = require('fs').readFileSync('stdin', 'utf8');
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var lines = input.split('\n');
+var line1 = lines.shift();
+var entrada01 = line1.split(" ");
 
-var linhaPrincipal = input.split('\n');//configuracao de saída
-var linha1 = linhaPrincipal.shift().split(" ");//configuracao de saída 
+var A = parseInt(entrada01.shift());//Entrada 01
+var B = parseInt(entrada01.shift());//Entrada 02
+var C = parseInt(entrada01.shift());//Entrada 03
 
-
-var A = parseInt(linha1.shift());//Entrada
-console.log("Digite o 1º valor: " + A);//Entrada com pergunta ao usuário
-var B = parseInt(linha1.shift());//Entrada
-console.log("Digite o 2º valor: " + B);//Entrada com pergunta ao usuário
-var C = parseInt(linha1.shift());//Entrada
-console.log("Digite o 3º valor: " + C);//Entrada com pergunta ao usuário
-
-MaiorAB = (A + B + Math.abs(A - B)) / 2;//Processamento 1
-MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2;//Processamento 2
+MaiorAB = (A + B + Math.abs(A - B)) / 2;//Processamento 01
+MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2;//Processamento 02
 
 console.log(MaiorABC + " eh o maior");//Saída

@@ -27,23 +27,20 @@ Exemplo de Entrada                  Exemplo de Saída
 2.5 -0.4
 -12.2 7.0                           16.4575
 */
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada 
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split("\n");
 
-var linhaPrincipal = input.split('\n');//configuracao de saída
-var linha1 = linhaPrincipal.shift().split(" "); //configuracao de saída
-var linha2 = linhaPrincipal.shift().split(" ");//configuracao de saída
+var line1 = lines.shift();
+var line2 = lines.shift();
 
-var x1 = parseFloat(linha1.shift());//Entrada
-console.log("Digite o 1º valor: " + x1);
+var entrada01 = line1.split(" ");
+var entrada02 = line2.split(" ");
 
-var y1 = parseFloat(linha1.shift());//Entrada
-console.log("Digite o 2º valor: " + y1);
+var x1 = parseFloat(entrada01.shift());//Entrada 01
+var y1 = parseFloat(entrada01.shift());//Entrada 02
 
-var x2 = parseFloat(linha2.shift());//Entrada
-console.log("Digite o 3º valor: " + x2);
-
-var y2 = parseFloat(linha2.shift());//Entrada
-console.log("Digite o 4º valor: " + y2);
+var x2 = parseFloat(entrada02.shift());//Entrada 03
+var y2 = parseFloat(entrada02.shift());//Entrada 04
 
 var distancia = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
 //Processamento

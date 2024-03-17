@@ -25,13 +25,12 @@ Exemplo de Entrada	            Exemplo de Saída
 67
 */
 
-var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada
+var input = require('fs').readFileSync('stdin', 'utf8');
+var lines = input.split('\n');
 
-var lines = input.split('\n');//configuracao de saída
+var tempoGasto = parseInt(lines.shift());//Entrada 01
+var velocidadeMedia = parseInt(lines.shift());//Entrada 02
 
-var tempoGasto = parseInt(lines.shift()); 
-var velocidadeMedia = parseInt(lines.shift());
+var distanciaPercorrida = (tempoGasto * velocidadeMedia) / 12;//Processamento
 
-var distanciaPercorrida = (tempoGasto * velocidadeMedia) / 12;
-
-console.log(distanciaPercorrida.toFixed(3));
+console.log(distanciaPercorrida.toFixed(3));//Saída
