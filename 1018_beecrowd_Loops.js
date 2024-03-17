@@ -55,7 +55,7 @@ notas.sort((a, b) => b - a);
 for(var i = 0; i < notas.length; i++){
     var divisorDeNotas = Math.floor(n / notas[i]);        
           if(n >= 0 && n < 1000000){
-                console.log(divisorDeNotas + " nota(s) de R$ " + notas[i]+ ",00");  
+                console.log(divisorDeNotas + " nota(s) de R$ " + notas[i]+ ",00"); 
                 n = n % notas[i];
             } 
-        }
+}

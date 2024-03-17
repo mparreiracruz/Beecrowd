@@ -84,5 +84,5 @@ console.log("MOEDAS:");
 for(var i = 0; i < moedas.length; i++){    
     var divisorDeMoedas = Math.floor(n / moedas[i]);
     console.log(divisorDeMoedas + " moeda(s) de R$ " + moedas[i].toFixed(2));  
-    n %= moedas[i];   
+    n = (n % moedas[i]) + 0.00001; 
 }

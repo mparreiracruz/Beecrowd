@@ -18,20 +18,30 @@ Exemplo de Entrada	            Exemplo de Saída
 
 2 3 2 6                         Valores aceitos
 */
+/**var lines = input.split("\n");
+
+var line1 = lines.shift();
+var line2 = lines.shift();
+
+var Produto01 = line1.split(" ");
+ * 
+ * 
+ */
+
+
 var input = require('fs').readFileSync('stdin', 'utf8');//configuracao de entrada 
 
-var linhaPrincipal = input.split('\n');//configuracao de saída
-var linha1 = linhaPrincipal.shift().split(" "); //configuracao de saída
+var lines = input.split("\n");
+var linhaRecebe = lines.shift();
+var linha1 = linhaRecebe.split(" ");
 
 var A = parseInt(linha1.shift());
 var B = parseInt(linha1.shift());
 var C = parseInt(linha1.shift());
 var D = parseInt(linha1.shift());
 
-if((B > C && D > A) && (C + D) > (A + B)){
-            }if( C && D > 0){
-                }if(A % 2 == 0){
-                    console.log("Valores aceitos");
-                    }else{
-                        console.log("Valores nao aceitos");
-                    }
+if ((B > C) && (D > A) && (C + D > A + B) && (C > 0) && (D > 0) && (A % 2 === 0)) {
+    console.log("Valores aceitos");
+} else {
+    console.log("Valores nao aceitos");
+}

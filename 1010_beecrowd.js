@@ -24,6 +24,7 @@ var input = require("fs").readFileSync("stdin","utf8");
 var lines = input.split("\n");
 
 var line1 = lines.shift();
+
 var line2 = lines.shift();
 
 var Produto01 = line1.split(" ");
