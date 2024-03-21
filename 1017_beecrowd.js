@@ -34,3 +34,4 @@ var velocidadeMedia = parseInt(lines.shift());//Entrada 02
 var distanciaPercorrida = (tempoGasto * velocidadeMedia) / 12;//Processamento
 
 console.log(distanciaPercorrida.toFixed(3));//Saída
+

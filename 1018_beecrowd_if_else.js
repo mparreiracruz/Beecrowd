@@ -49,6 +49,7 @@ let valor = parseInt(lines.shift())
 
 console.log(valor)
 
+if(valor > 0 && valor < 1000000){
         var qtdnotas = parseInt(valor/100)
         valor = valor % 100
         console.log(`${qtdnotas} nota(s) de R$ ${100},00`)
@@ -76,3 +77,6 @@ console.log(valor)
         var qtdnotas = parseInt(valor/1)
         valor = valor % 1
         console.log(`${qtdnotas} nota(s) de R$ ${1},00`)
+} else {
+        console.log("Digite um valor maior que zero e menor que um milhão.")
+}

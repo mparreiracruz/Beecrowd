@@ -27,8 +27,8 @@ a descrição do problema. Não esqueça de imprimir o enter após o final de ca
 "Presentation Error".
 
 Exemplo de Entrada	        Exemplo de Saída
-2.0 4.0 7.5 8.0 6.4         Media: 5.4
-                            Aluno em exame.
+2.0 4.0 7.5 8.0             Media: 5.4
+6.4                         Aluno em exame.
                             Nota do exame: 6.4
                             Aluno aprovado.
                             Media final: 5.9
@@ -42,27 +42,40 @@ Exemplo de Entrada	        Exemplo de Saída
                             Aluno aprovado.
 */
 var input = require('fs').readFileSync('stdin', 'utf8');
-
 var lines = input.split("\n");
-var linhaRecebe = lines.shift();
-var linha1 = linhaRecebe.split(" ");
 
-var N1 = parseFloat(linha1.shift()).toFixed(1);//peso 2
-var N2 = parseFloat(linha1.shift()).toFixed(1);//peso 3
-var N3 = parseFloat(linha1.shift()).toFixed(1);;//peso 4
-var N4 = parseFloat(linha1.shift()).toFixed(1);;//peso 1
+var line1 = lines.shift();
+var line2 = lines.shift();
+
+var linhaPrincipal1 = line1.split(" ");
+
+var N1 = parseFloat(linhaPrincipal1.shift()).toFixed(1);//peso 2
+var N2 = parseFloat(linhaPrincipal1.shift()).toFixed(1);//peso 3
+var N3 = parseFloat(linhaPrincipal1.shift()).toFixed(1);;//peso 4
+var N4 = parseFloat(linhaPrincipal1.shift()).toFixed(1);;//peso 1
+
+var linhaPrincipal2 = line2.split(" ");
+
+var N5 = parseFloat(linhaPrincipal2.shift()).toFixed(1);
 
 var mediaPonderada = ((N1 * 2) + (N2 * 3) + (N3 * 4) + (N4 * 1)) / 10;
+var mediaFinal = (mediaPonderada + N5) / 2;
 
-console.log("Media: " + mediaPonderada.toFixed(1));
+console.log("Media: " + mediaPonderada);
 
-if(mediaPonderada >= 7.0){
-    console.log("Aluno aprovado.");
-} if(mediaPonderada < 5.0){
-    console.log("Aluno reprovado.");
-} if(mediaPonderada >= 5.0 && mediaPonderada <= 6.9) {
-    console.log("Aluno em exame.");
-}
-
-//Se a média calculada for um valor entre 5.0 e 6.9, inclusive estas, o programa deve imprimir a mensagem 
-//"Aluno em exame.".
+        if (mediaPonderada >= 7.0) {//falso
+            console.log("Aluno aprovado.");
+        } else if (mediaPonderada < 5.0) {//falso
+            console.log("Aluno reprovado.");
+        } else {
+            console.log("Aluno em exame.");//verdadeiro
+            console.log("Nota do exame: " + N5);//verdadeiro
+        
+            if (mediaFinal >= 5.0) {//verdadeiro
+                console.log("Aluno aprovado.");
+                console.log("Media final: " + mediaFinal.toFixed(1));
+            } else {
+                console.log("Aluno reprovado.");
+                console.log("Media final: " + mediaFinal.toFixed(1));
+            }
+        }

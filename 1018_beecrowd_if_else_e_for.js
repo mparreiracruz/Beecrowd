@@ -43,36 +43,22 @@ Exemplo de Entrada                      	Exemplo de Saída
                                             1 nota(s) de R$ 1,00
 */
 var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split('\n');
+var linha1 = input.split('\n');
 
-let valor = parseInt(lines.shift())
+var n = parseInt(linha1.shift());
 
-console.log(valor)
+console.log(n);
 
-        var qtdnotas = parseInt(valor/100)
-        valor = valor % 100
-        console.log(`${qtdnotas} nota(s) de R$ ${100},00`)
-        
-        var qtdnotas = parseInt(valor/50)
-        valor = valor % 50
-        console.log(`${qtdnotas} nota(s) de R$ ${50},00`)
+var notas = [100, 50, 20, 10, 5, 2, 1];
 
-        var qtdnotas = parseInt(valor/20)
-        valor = valor % 20
-        console.log(`${qtdnotas} nota(s) de R$ ${20},00`)
+notas.sort((a, b) => b - a);
 
-        var qtdnotas = parseInt(valor/10)
-        valor = valor % 10
-        console.log(`${qtdnotas} nota(s) de R$ ${10},00`)
-
-        var qtdnotas = parseInt(valor/5)
-        valor = valor % 5
-        console.log(`${qtdnotas} nota(s) de R$ ${5},00`)
-
-        var qtdnotas = parseInt(valor/2)
-        valor = valor % 2
-        console.log(`${qtdnotas} nota(s) de R$ ${2},00`)
-
-        var qtdnotas = parseInt(valor/1)
-        valor = valor % 1
-        console.log(`${qtdnotas} nota(s) de R$ ${1},00`)
+if(n >= 0 && n < 1000000){
+    for(var i = 0; i < notas.length; i++){
+        var divisorDeNotas = Math.floor(n / notas[i]);            
+        console.log(divisorDeNotas + " nota(s) de R$ " + notas[i]+ ",00"); 
+                    n = n % notas[i];
+            } 
+        } else {
+            console.log("Digite um valor maior que zero e menor que um milhão.")
+    }

@@ -32,7 +32,7 @@ var A = parseInt(entrada01.shift());//Entrada 01
 var B = parseInt(entrada01.shift());//Entrada 02
 var C = parseInt(entrada01.shift());//Entrada 03
 
-MaiorAB = (A + B + Math.abs(A - B)) / 2;//Processamento 01
-MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2;//Processamento 02
+var MaiorAB = (A + B + Math.abs(A - B)) / 2;//Processamento 01
+var MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2;//Processamento 02
 
 console.log(MaiorABC + " eh o maior");//Saída
