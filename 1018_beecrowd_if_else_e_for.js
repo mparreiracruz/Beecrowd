@@ -51,14 +51,12 @@ console.log(n);
 
 var notas = [100, 50, 20, 10, 5, 2, 1];
 
-notas.sort((a, b) => b - a);
-
-if(n >= 0 && n < 1000000){
+if(n > 0 && n < 1000000) {
     for(var i = 0; i < notas.length; i++){
         var divisorDeNotas = Math.floor(n / notas[i]);            
         console.log(divisorDeNotas + " nota(s) de R$ " + notas[i]+ ",00"); 
                     n = n % notas[i];
             } 
-        } else {
-            console.log("Digite um valor maior que zero e menor que um milhão.")
-    }
+                }else {
+                    console.log("Digite um valor maior que zero e menor que um milhão.")
+                            }
