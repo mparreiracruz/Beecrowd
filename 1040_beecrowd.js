@@ -47,35 +47,31 @@ var lines = input.split("\n");
 var line1 = lines.shift();
 var line2 = lines.shift();
 
-var linhaPrincipal1 = line1.split(" ");
 
+var linhaPrincipal1 = line1.split(" ");
+var linhaPrincipal2 = line2.split(" ");
+
+
+
+/**
+ * var input = require("fs").readFileSync("stdin","utf8");
+var lines = input.split("\n");// lines = ["12 1 5.30" ,  "16 2 5.10"]
+
+var line1 = lines.shift();//line1 = ["12 1 5.30"]
+var line2 = lines.shift();//line2 = ["16 2 5.10"]
+
+var Produto01 = line1.split(" ");//Produto01 = ["12" , "1" , "5.30"]
+
+----------------------------------------------------------------------
+var lines = input.split('\n');
+
+var A = parseInt(lines.shift());//Entrada 01
+ */
 var N1 = parseFloat(linhaPrincipal1.shift()).toFixed(1);//peso 2
 var N2 = parseFloat(linhaPrincipal1.shift()).toFixed(1);//peso 3
 var N3 = parseFloat(linhaPrincipal1.shift()).toFixed(1);;//peso 4
 var N4 = parseFloat(linhaPrincipal1.shift()).toFixed(1);;//peso 1
-
-var linhaPrincipal2 = line2.split(" ");
-
 var N5 = parseFloat(linhaPrincipal2.shift()).toFixed(1);
 
 var mediaPonderada = ((N1 * 2) + (N2 * 3) + (N3 * 4) + (N4 * 1)) / 10;
 var mediaFinal = (mediaPonderada + N5) / 2;
-
-console.log("Media: " + mediaPonderada);
-
-        if (mediaPonderada >= 7.0) {//falso
-            console.log("Aluno aprovado.");
-        } else if (mediaPonderada < 5.0) {//falso
-            console.log("Aluno reprovado.");
-        } else {
-            console.log("Aluno em exame.");//verdadeiro
-            console.log("Nota do exame: " + N5);//verdadeiro
-        
-            if (mediaFinal >= 5.0) {//verdadeiro
-                console.log("Aluno aprovado.");
-                console.log("Media final: " + mediaFinal.toFixed(1));
-            } else {
-                console.log("Aluno reprovado.");
-                console.log("Media final: " + mediaFinal.toFixed(1));
-            }
-        }
