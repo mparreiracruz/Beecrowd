@@ -1,5 +1,4 @@
 const { Console } = require('console')
-
 /*
 beecrowd | 1040
 Média 3
@@ -21,7 +20,7 @@ a mensagem "Aluno aprovado." (caso a média final seja 5.0 ou mais ) ou "Aluno r
  apresente na última linha uma mensagem "Media final: " seguido da média final para esse aluno.
 
 Entrada
-A entrada contém quatro números de ponto flutuante correspendentes as notas dos alunos.
+A entrada contém quatro números de ponto flutuante correspendentes as notas dos alunos e uma quinta entrada adicional referente a "nota do exame".
 
 Saída
 Todas as respostas devem ser apresentadas com uma casa decimal. As mensagens devem ser impressas conforme 
