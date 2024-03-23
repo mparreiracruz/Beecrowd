@@ -1,3 +1,5 @@
+const { Console } = require('console')
+
 /*
 beecrowd | 1040
 Média 3
@@ -41,37 +43,41 @@ Exemplo de Entrada	        Exemplo de Saída
 9.0 4.0 8.5 9.0             Media: 7.3
                             Aluno aprovado.
 */
-var input = require('fs').readFileSync('stdin', 'utf8');
-var lines = input.split("\n");
+var input = require('fs').readFileSync('stdin', 'utf8')
 
-var line1 = lines.shift();
-var line2 = lines.shift();
+var lines = input.split("\n")
 
+var line1 = lines.shift()
+var line2 = lines.shift()
 
-var linhaPrincipal1 = line1.split(" ");
-var linhaPrincipal2 = line2.split(" ");
+var linhaPrincipal1 = line1.split(" ")
 
+var N1 = parseFloat(linhaPrincipal1.shift()).toFixed(1)
+var N2 = parseFloat(linhaPrincipal1.shift()).toFixed(1)
+var N3 = parseFloat(linhaPrincipal1.shift()).toFixed(1)
+var N4 = parseFloat(linhaPrincipal1.shift()).toFixed(1)
 
+const N1Peso = 2
+const N2Peso = 3
+const N3Peso = 4
+const N4Peso = 1
 
-/**
- * var input = require("fs").readFileSync("stdin","utf8");
-var lines = input.split("\n");// lines = ["12 1 5.30" ,  "16 2 5.10"]
-
-var line1 = lines.shift();//line1 = ["12 1 5.30"]
-var line2 = lines.shift();//line2 = ["16 2 5.10"]
-
-var Produto01 = line1.split(" ");//Produto01 = ["12" , "1" , "5.30"]
-
-----------------------------------------------------------------------
-var lines = input.split('\n');
-
-var A = parseInt(lines.shift());//Entrada 01
- */
-var N1 = parseFloat(linhaPrincipal1.shift()).toFixed(1);//peso 2
-var N2 = parseFloat(linhaPrincipal1.shift()).toFixed(1);//peso 3
-var N3 = parseFloat(linhaPrincipal1.shift()).toFixed(1);;//peso 4
-var N4 = parseFloat(linhaPrincipal1.shift()).toFixed(1);;//peso 1
-var N5 = parseFloat(linhaPrincipal2.shift()).toFixed(1);
-
-var mediaPonderada = ((N1 * 2) + (N2 * 3) + (N3 * 4) + (N4 * 1)) / 10;
-var mediaFinal = (mediaPonderada + N5) / 2;
+var mediaPonderada = ((N1 * N1Peso) + (N2 *N2Peso) + (N3 * N3Peso) + (N4 * N4Peso)) / 10
+console.log("Media: " + mediaPonderada.toFixed(1))
+if(mediaPonderada >= 7.0) {
+    console.log("Aluno aprovado.")
+}   if(mediaPonderada < 5.0) {
+    console.log("Aluno reprovado.")
+}       if(mediaPonderada >= 5.0 && mediaPonderada <= 6.9) {
+    console.log("Aluno em exame.")
+    var linhaPrincipal2 = line2.split(" ")
+    var N5 = parseFloat(linhaPrincipal2.shift())
+    console.log("Nota do exame: " + N5.toFixed(1))
+    var mediaFinal = (mediaPonderada + N5) / 2
+            } if(mediaFinal >= 5.0) {
+                    console.log("Aluno aprovado.")
+                    console.log("Media final: " + mediaFinal.toFixed(1))
+                } if(mediaFinal <= 4.9) {
+                    console.log("Aluno reprovado.")
+                    console.log("Media final: " + mediaFinal.toFixed(1))
+                }
