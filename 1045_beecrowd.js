@@ -55,10 +55,3 @@ if(numeros[0] >= numeros[1] + numeros[2]) {
     if(Math.pow(numeros[0], 2) == Math.pow(numeros[1], 2) + Math.pow(numeros[2], 2)){
         console.log("TRIANGULO RETANGULO")
     }
-
-
-
-//console.log(numeros)
-
-
-
