@@ -20,9 +20,7 @@ Exemplo de Entrada	            Exemplo de Saída
 4.5 -2.2                        Q4
 
 
-
 0.1 0.1                         Q1
-
 
 
 0.0 0.0                         Origem
