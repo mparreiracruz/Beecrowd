@@ -52,6 +52,19 @@ numeros.sort((a, b) => b - a)
 if(numeros[0] >= numeros[1] + numeros[2]) {  
     console.log("NAO FORMA TRIANGULO")
 }
-    if(Math.pow(numeros[0], 2) == Math.pow(numeros[1], 2) + Math.pow(numeros[2], 2)){
+    else if(Math.pow(numeros[0], 2) == Math.pow(numeros[1], 2) + Math.pow(numeros[2], 2)){
         console.log("TRIANGULO RETANGULO")
     }
+         else if(Math.pow(numeros[0], 2) > Math.pow(numeros[1], 2) + (Math.pow(numeros[2], 2))) {
+            console.log("TRIANGULO OBTUSANGULO")
+        }
+            else if(Math.pow(numeros[0], 2) < Math.pow(numeros[1], 2) + (Math.pow(numeros[2], 2))) {
+                console.log("TRIANGULO ACUTANGULO")
+            }
+                if(numeros[0] == numeros[1] && numeros[1] == numeros[2]){
+                    console.log("TRIANGULO EQUILATERO")
+                }
+                    else if(numeros[0] == numeros[1] || numeros[1] == numeros[2] || numeros[0] == numeros[2]) {
+                        console.log("TRIANGULO ISOSCELES")
+                    }
+          
