@@ -32,4 +32,3 @@ if (A % B == 0 || B % A == 0){
 } else {
     console.log("Nao sao Multiplos")
 }
-
