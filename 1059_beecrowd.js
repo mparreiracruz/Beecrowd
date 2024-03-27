@@ -20,9 +20,8 @@ Exemplo de Entrada	Exemplo de Saída
 100
 */
 
-for (var n = 2; n <= 100; n++) {
+for (var n = 1; n <= 100; n++) {
     if (n % 2 == 0) {
         console.log(n);
     }
 }
-
