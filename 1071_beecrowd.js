@@ -24,38 +24,21 @@ Exemplo de Entrada          Exemplo de saída
 12                          0
 12
 */
-/*var input = require('fs').readFileSync('stdin', 'utf8')
-var lines = input.split('\n')
-
-var X = parseInt(lines.shift())
-var Y = parseInt(lines.shift())
-
-var somaImpares = 0
-
-for (var i = X; i < Y; i++) {
-    if ((Math.abs(i % 2) == 1)) { 
-        //somaImpares += i
-        somaImpares = somaImpares + i
-    }
-}
-console.log(somaImpares)
-*/
-
 var input = require('fs').readFileSync('stdin', 'utf8')
 var lines = input.split('\n')
 
 var X = parseInt(lines.shift())
 var Y = parseInt(lines.shift())
 
-var numeros = [X, Y];
+var numeros = [X, Y]
 
-var contadorImpares = 0
+var contadorImpar = 0
 var somaImpares = 0
-for (var i = 0; i < numeros.length; i++) {
-    if (Math.abs(numeros[i] % 2) == 1) {
-        contadorImpares++
-        somaImpares += i
-        somaImpares = somaImpares + i       
-    }
+
+for (let i = 0 ; i < numeros.length ; i++) {
+    if(numeros % 2 != 0) {
+        contadorImpar = contadorImpar + 1
+        somaImpares += numeros[i]
+    } 
 }
 console.log(somaImpares)

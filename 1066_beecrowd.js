@@ -30,37 +30,28 @@ var n3 = parseInt(lines.shift())
 var n4 = parseInt(lines.shift())
 var n5 = parseInt(lines.shift())
 
-
 var numeros = [n1, n2, n3, n4, n5]
 
-var contadorPares = 0
-for (var i = 0; i < numeros.length; i++) {
-    if (numeros[i] % 2 == 0) {
-        contadorPares++
-    }
-}
-console.log(contadorPares + " valor(es) par(es)")
+var contadorPar = 0
+var contadorImpar = 0
+var contadorPositivo = 0
+var contadorNegativo = 0
 
-var contadorImpares = 0
-for (var i = 0; i < numeros.length; i++) {
-    if (Math.abs(numeros[i] % 2) == 1) {
-        contadorImpares++       
-    }
-}
-console.log(contadorImpares + " valor(es) impar(es)")
-
-var contadorPositivos = 0 
-for (var i = 0; i < numeros.length; i++) {
-    if (numeros[i] > 0) {
-        contadorPositivos++;
-    }
-}
-console.log(contadorPositivos + " valor(es) positivo(s)")
-
-var contadorNegativos = 0
-for (var i = 0; i < numeros.length; i++) {
-    if (numeros[i] < 0) {
-        contadorNegativos++;
-    }
-}
-console.log(contadorNegativos + " valor(es) negativo(s)")
+for (let i = 0 ; i < 5 ; i++) {
+    if(numeros[i] % 2 == 0) {
+        contadorPar = contadorPar + 1
+    } else {
+        contadorImpar = contadorImpar + 1
+        }
+        if (numeros[i] > 0) {
+            contadorPositivo = contadorPositivo + 1
+            }
+            else if (numeros[i] < 0) {
+                contadorNegativo = contadorNegativo + 1
+            }
+        } 
+ 
+console.log(contadorPar + " valor(es) par(es)")
+ console.log(contadorImpar + " valor(es) impar(es)")
+ console.log(contadorPositivo + " valor(es) positivo(s)")
+ console.log(contadorNegativo + " valor(es) negativo(s)")
