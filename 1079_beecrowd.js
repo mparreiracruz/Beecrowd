@@ -18,3 +18,17 @@ Exemplo de Entrada              Exemplo de saída
 5.1 4.2 8.1                     9.3    
 8.0 9.0 10.0                        
 */
+var input = require('fs').readFileSync('stdin', 'utf8')
+var lines = input.split("\n")
+
+var N = parseInt(lines.shift())
+  
+const aPeso = 2
+const bPeso = 3
+const cPeso = 5
+
+for(i = 0; i < N; i++){
+    var [a, b, c] =lines[i].split(" ")    
+    var media = (a * aPeso + b * bPeso + c * cPeso) / 10
+    console.log(media.toFixed(1))
+}
