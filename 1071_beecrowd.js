@@ -30,15 +30,26 @@ var lines = input.split('\n')
 var X = parseInt(lines.shift())
 var Y = parseInt(lines.shift())
 
-var numeros = [X, Y]
-
-var contadorImpar = 0
+const valorMinimo = Math.min(X, Y) + 1//Math.min determina o valor mínimo entre X e Y
+/*O + 1 adicionado à constante valorMinimo é necessário para garantir que o intervalo inclua ambos os números X e Y.
+Se X for 5 e Y for 10, sem o + 1, o intervalo seria de 5 a 10, excluindo o 5. Adicionando + 1, o intervalo se torna de 5 a 11, incluindo o 5. Isso é importante porque você quer que a soma inclua todos os números ímpares entre X e Y, incluindo ambos os extremos.*/
+const valorMaximo = Math.max(X, Y)//Math.max determina o maior valor entre X e Y
 var somaImpares = 0
 
-for (let i = 0 ; i < numeros.length ; i++) {
-    if(numeros % 2 != 0) {
-        contadorImpar = contadorImpar + 1
-        somaImpares += numeros[i]
-    } 
+for(var i = valorMinimo; i < valorMaximo; i++) {
+/*
+var i = valorMinimo:variável i é atribuída ao valor de valorMinimo que será o valor inicial do contador.
+
+i < valorMaximo: Ccondição de continuação do loop. Enquanto i for menor que valorMaximo, o loop continuará será executado.
+
+i++: É o incremento. A cada iteração do loop, o valor de i será incrementado em 1.
+*/
+    if(i % 2 != 0){
+/*
+Se i for ímpar (se o resto da divisão de i por 2 for diferente de zero), ele será adicionado à variável somaImpares.
+*/        
+        somaImpares = somaImpares + i
+    }
 }
+
 console.log(somaImpares)

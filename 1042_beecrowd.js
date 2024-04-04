@@ -1,5 +1,5 @@
-/**
- * beecrowd | 1042
+/*
+beecrowd | 1042
 Sort Simples
 Adaptado por Neilor Tonin, URI  Brasil
 
@@ -39,7 +39,6 @@ var linhaPrincipal1 = line1.split(" ")
 var n1 = parseInt(linhaPrincipal1.shift())
 var n2 = parseInt(linhaPrincipal1.shift())
 var n3 = parseInt(linhaPrincipal1.shift())
-
 
 var numeros = [n1, n2, n3]
 
