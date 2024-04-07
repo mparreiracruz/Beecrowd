@@ -27,43 +27,27 @@ Exemplo de Entrada	                Exemplo de Saída
 5 C
 14 R
 */
-
 var input = require('fs').readFileSync('stdin', 'utf8')
-var lines = input.split('\n')
+var lines = input.split("\n")
 
-var casosDeTeste = parseInt(lines.shift())
+var N = parseInt(lines.shift())
+console.log(N)
 
-var total = 0
-var coelho = 0
-var rato = 0
-var sapo = 0
+for(i = 0; i < N; i++){
+    var [a, b] = lines[i].split(" ")    
+    const tipo = [
+        { C: 'coelhos'},
+        { R: 'ratos' },
+        { S: 'sapos' },
+        ]
+        if (tipo == "C") {
+            coelho += parseInt(quantidade);
+          } else if (tipo == "R") {
+            rato += parseInt(quantidade);
+          } else if (tipo == "S") {
+            sapo += parseInt(quantidade);
+          }
+        } 
+    
+    console.log(quantidade + tipo)
 
-for(var i = 0; i < casosDeTeste; i++) {
-
-  var coluna = lines.shift().split(' ')
-
-  total += parseInt(coluna[0])
-
-    if(coluna[1] == 'C') {
-        coelho += parseInt(coluna[0])
-    }
-        if(coluna[1] == 'R') {
-            rato += parseInt(coluna[0])
-        }
-            if(coluna[1] == 'S') {
-                sapo += parseInt(coluna[0])
-            }
-}
-
-console.log('Total: ' + total + ' cobaias')
-console.log('Total de coelhos: ' + coelho)
-console.log('Total de ratos: ' + rato)
-console.log('Total de sapos: '+ sapo)
-
-var percentualCoelho = ((coelho * 100) / total).toFixed(2)
-var percentualRato = ((rato * 100) / total).toFixed(2)
-var percentualSapo = ((sapo * 100) / total).toFixed(2)
-
-console.log('Percentual de coelhos: ' + percentualCoelho + " %")
-console.log('Percentual de ratos: ' + percentualRato + " %")
-console.log('Percentual de sapos: ' + percentualSapo + " %")
