@@ -38,6 +38,8 @@ var coelho = 0
 var rato = 0
 var sapo = 0
 
+console.log(casosDeTeste)
+
 for(var i = 0; i < casosDeTeste; i++) {
 
   var coluna = lines.shift().split(' ')

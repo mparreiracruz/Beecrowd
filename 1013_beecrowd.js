@@ -22,17 +22,16 @@ Exemplos de Entrada             Exemplos de Saída
 
 217 14 6                        217 eh o maior
 */
-var input = require('fs').readFileSync('stdin', 'utf8');
+var input = require('fs').readFileSync('stdin', 'utf8')
+var lines = input.split('\n')
+var line1 = lines.shift()
+var entrada01 = line1.split(" ")
 
-var lines = input.split('\n');
-var line1 = lines.shift();
-var entrada01 = line1.split(" ");
+var A = parseInt(entrada01.shift())
+var B = parseInt(entrada01.shift())
+var C = parseInt(entrada01.shift())
 
-var A = parseInt(entrada01.shift());//Entrada 01
-var B = parseInt(entrada01.shift());//Entrada 02
-var C = parseInt(entrada01.shift());//Entrada 03
+var MaiorAB = (A + B + Math.abs(A - B)) / 2
+var MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2
 
-var MaiorAB = (A + B + Math.abs(A - B)) / 2;//Processamento 01
-var MaiorABC = (MaiorAB + C + Math.abs(MaiorAB - C)) / 2;//Processamento 02
-
-console.log(MaiorABC + " eh o maior");//Saída
+console.log(MaiorABC + " eh o maior")
